@@ -36,7 +36,7 @@ macosx:
 	make lpeg.so "DLLFLAGS = -bundle -undefined dynamic_lookup"
 
 lpeg.so: $(FILES)
-	env $(CC) $(DLLFLAGS) $(FILES) -o lpeg.so
+	env $(CC) $(DLLFLAGS) $(LDFLAGS) $(FILES) -o lpeg.so
 
 $(FILES): makefile
 
